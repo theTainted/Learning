@@ -1,0 +1,10 @@
+pageobjects\HomePage.class
+pageobjects\ProductListPage.class
+com\learning\tests\TrailTestCases.class
+pageobjects\Registration.class
+pageobjects\SignIn.class
+com\learning\tests\whistlesOrders.class
+com\learning\tests\testcaseAttempts.class
+pageobjects\ProductDisplayPage.class
+com\learning\tests\TestCaseTestNg.class
+com\learning\tests\TestAddItemsToBasket.class

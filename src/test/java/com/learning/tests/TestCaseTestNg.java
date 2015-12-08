@@ -1,8 +1,5 @@
 package com.learning.tests;
 
-import com.gargoylesoftware.htmlunit.Page;
-import org.openqa.selenium.By;
-import pageobjects.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageobjects.HomePage;
 import pageobjects.ProductDisplayPage;
-import pageobjects.ProductListPage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -64,7 +61,9 @@ public class TestCaseTestNg {
         //homePage.hoverOverMiniBasket();
         ProductDisplayPage PDP = PageFactory.initElements(driver,ProductDisplayPage.class);
         PDP.setSize("product");
-        PDP.clickOnAddToBasket();
+        PDP.clickOnAddToBasket(driver);
+        homePage.hoverOverMiniBasket(driver);
+
 
         //System.out.println(sText);
     }

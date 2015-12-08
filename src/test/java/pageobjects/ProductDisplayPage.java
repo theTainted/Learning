@@ -1,14 +1,12 @@
 package pageobjects;
 
 import com.learning.functions.DB;
-import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -16,7 +14,7 @@ import java.util.List;
  */
 public class ProductDisplayPage {
     WebDriver driver;
-//Testing Git - no meaning
+
 
     @FindBy(xpath="//div[@id='product-content']/div[@class='product-variations']//li[@class='attribute variant-dropdown']//a[@class='ffSelectButton']")
     public WebElement sizeDropDown;

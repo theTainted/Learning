@@ -5,7 +5,6 @@ import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
@@ -41,14 +40,15 @@ public class ProductDisplayPage {
       }
         }
     }
-    public void clickOnAddToBasket(WebDriver driver) {
+    public void clickOnAddToBasket(WebDriver driver)throws Exception {
         //System.out.println("i came here");
         try{
           //  System.out.println("i came here to try");
             addToCart.isEnabled();
             //System.out.println("addToCart: "+addToCart.isEnabled());
-            WebDriverWait wait = new WebDriverWait(driver,5);
-           wait.until(ExpectedConditions.elementToBeClickable(addToCart));
+           WebDriverWait wait = new WebDriverWait(driver,5);
+           
+            Thread.sleep(5000);
 
             addToCart.click();
         }

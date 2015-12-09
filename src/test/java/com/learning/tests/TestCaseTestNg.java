@@ -1,21 +1,15 @@
 package com.learning.tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageobjects.HomePage;
 import pageobjects.ProductDisplayPage;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -49,7 +43,7 @@ public class TestCaseTestNg {
     @Test
     public void testClickOnSignIn () throws Exception {
         driver.navigate().to("http://jv-dev.dev-tzr.eu/");
-        driver.manage().window().maximize();
+       driver.manage().window().maximize();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -65,8 +59,9 @@ public class TestCaseTestNg {
         //homePage.hoverOverMiniBasket();
         ProductDisplayPage PDP = PageFactory.initElements(driver,ProductDisplayPage.class);
         PDP.setSize("product");
-        PDP.clickOnAddToBasket(driver);
-        //homePage.hoverOverMiniBasket(driver);
+        PDP.clickOnAddToBasket();
+        
+        homePage.hoverOverMiniBasket(driver);
 
     }
 

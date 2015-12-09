@@ -2,7 +2,6 @@ package pageobjects;
 
 
 import com.learning.functions.DB;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -63,10 +62,10 @@ public class HomePage {
     public void hoverOverMiniBasket(WebDriver driver){
         System.out.println("minibasket :" + miniBasket.isDisplayed());
         Actions actions = new Actions(driver);
-        actions.moveToElement(miniBasket);
-        WebElement checkOutLink = driver.findElement(By.partialLinkText("mini-cart-link-checkout"));
+        actions.moveToElement(miniBasket).perform();
+     /*   WebElement checkOutLink = driver.findElement(By.partialLinkText("mini-cart-link-checkout"));
         actions.moveToElement(checkOutLink);
-        actions.click().build().perform();
+        actions.click().build().perform();*/
 
         //mini-cart-link-checkout
     }

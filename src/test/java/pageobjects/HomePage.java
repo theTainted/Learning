@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 
 /**
  * Created by Syam on 11-10-2015.
@@ -25,7 +24,7 @@ public class HomePage {
     @FindBy(xpath="//input[@type='submit'][@value='go']")
     public WebElement searchButton;
 
-    @FindBy(id="mini-cart")
+    @FindBy(xpath="//a[@class='mini-cart-link']")
     public WebElement miniBasket;
 
     /*@FindBy(id="search-query-wrapper")
@@ -34,9 +33,9 @@ public class HomePage {
     /*--------------------------------------------------------------------------------------*/
 
     public void enterSearchText(String sTestCaseID) throws Exception {
-        System.out.println(searchTextBox.isEnabled());
+//        System.out.println(searchTextBox.isEnabled());
         String sSearchText = DB.GetData("login", "TestCaseID", sTestCaseID, "searchTerm");
-        System.out.println(sSearchText);
+//        System.out.println(sSearchText);
         //    Reporter.log(sSearchText);
 
         searchTextBox.sendKeys(sSearchText);
@@ -47,7 +46,7 @@ public class HomePage {
         searchButton.click();
         ProductListPage PLP = PageFactory.initElements(driver,ProductListPage.class);
         String sExpectedSearchText=DB.GetData("login", "TestCaseID", sTestCaseID, "searchTerm");
-        System.out.println("obj0: "+PLP);
+//        System.out.println("obj0: "+PLP);
 
       //  System.out.println("obj: "+PLP.sText);
     /*  System.out.println("pLP is :"+PLP.searchResultHeading.getText());
@@ -61,7 +60,8 @@ public class HomePage {
 
 
     }
-    public void hoverOverMiniBasket(){
+    public void hoverOverMiniBasket(WebDriver driver){
+        System.out.println("minibasket :" + miniBasket.isDisplayed());
         Actions actions = new Actions(driver);
         actions.moveToElement(miniBasket);
         WebElement checkOutLink = driver.findElement(By.partialLinkText("mini-cart-link-checkout"));

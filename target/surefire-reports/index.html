@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Parallel_test_suite">
-              <span class="suite-name border-failed">Parallel test suite</span>
+              <span class="suite-name border-passed">Parallel test suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Parallel_test_suite">
-                    <span>C:\Users\Syam\IdeaProjects\Learning\testng.xml</span>
+                    <span>C:\Users\Syam\Learning\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Parallel_test_suite" class="hide-methods failed suite-Parallel_test_suite"> (hide)</a> <!-- hide-methods failed suite-Parallel_test_suite -->
-                      <a href="#" panel-name="suite-Parallel_test_suite" class="show-methods failed suite-Parallel_test_suite"> (show)</a> <!-- show-methods failed suite-Parallel_test_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Parallel_test_suite" class="hide-methods passed suite-Parallel_test_suite"> (hide)</a> <!-- hide-methods passed suite-Parallel_test_suite -->
+                      <a href="#" panel-name="suite-Parallel_test_suite" class="show-methods passed suite-Parallel_test_suite"> (show)</a> <!-- show-methods passed suite-Parallel_test_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Parallel_test_suite">
+                    <div class="method-list-content passed suite-Parallel_test_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Parallel_test_suite" title="com.learning.tests.TestCaseTestNg" hash-for-method="testClickOnSignIn">testClickOnSignIn</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Parallel_test_suite -->
+                    </div> <!-- method-list-content passed suite-Parallel_test_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,9 +116,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Parallel_test_suite" class="panel Parallel_test_suite">
-          <div class="suite-Parallel_test_suite-class-failed">
+          <div class="suite-Parallel_test_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.learning.tests.TestCaseTestNg</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -127,44 +127,14 @@
                   <a name="testClickOnSignIn">
                   </a> <!-- testClickOnSignIn -->
                   <span class="method-name">testClickOnSignIn</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 15.53 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
-System info: host: &apos;Aidan&apos;, ip: &apos;192.168.0.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_66&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 129c2797-9575-45d4-bb76-a4b8e27ea835
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:273)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy5.click(Unknown Source)
-	at pageobjects.ProductDisplayPage.setSize(ProductDisplayPage.java:33)
-	at com.learning.tests.TestCaseTestNg.testClickOnSignIn(TestCaseTestNg.java:66)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;2.47.1&apos;, revision: &apos;unknown&apos;, time: &apos;2015-07-30 11:02:44&apos;
-System info: host: &apos;Aidan&apos;, ip: &apos;192.168.0.15&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_66&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:9348)
-	at &lt;anonymous class&gt;.Utils.getElementAt(file:///C:/Users/Syam/AppData/Local/Temp/anonymous1853063535600330660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:8942)
-	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/Syam/AppData/Local/Temp/anonymous1853063535600330660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9980)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/Syam/AppData/Local/Temp/anonymous1853063535600330660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12626)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Syam/AppData/Local/Temp/anonymous1853063535600330660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12643)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/Syam/AppData/Local/Temp/anonymous1853063535600330660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:623)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Parallel_test_suite-class-failed -->
+          </div> <!-- suite-Parallel_test_suite-class-passed -->
         </div> <!-- panel Parallel_test_suite -->
         <div panel-name="test-xml-Parallel_test_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Syam\IdeaProjects\Learning\testng.xml</span>
+            <span class="header-content">C:\Users\Syam\Learning\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -218,12 +188,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testClickOnSignIn')
 data.setCell(0, 2, 'com.learning.tests.TestCaseTestNg')
-data.setCell(0, 3, 37895);
+data.setCell(0, 3, 36846);
 window.suiteTableData['Parallel_test_suite']= { tableData: data, tableDiv: 'times-div-Parallel_test_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-Parallel_test_suite">
               </div> <!-- times-div-Parallel_test_suite -->
             </div> <!-- times-div -->
@@ -255,10 +225,8 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testClickOnSignIn</span>
-                <span class="method-start">13184 ms</span>
+                <span class="method-start">14372 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

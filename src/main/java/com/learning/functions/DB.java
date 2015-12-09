@@ -43,9 +43,9 @@ public class DB {
         ResultSet results;
         String ID=null;
        try{
-            System.out.println(query);
+//            System.out.println(query);
             results=statement.executeQuery(query);
-           System.out.println(results);
+//           System.out.println(results);
            if(results.next()){
            //    System.out.println("if");
             ID=results.getString(sExpectedValue);
@@ -55,7 +55,7 @@ public class DB {
         }
         catch (Exception e){
             e.printStackTrace();
-            System.out.println("inside catch");
+//            System.out.println("inside catch");
         }
         tearDown();
         return ID ;

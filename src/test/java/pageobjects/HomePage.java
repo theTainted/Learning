@@ -33,9 +33,9 @@ public class HomePage {
     /*--------------------------------------------------------------------------------------*/
 
     public void enterSearchText(String sTestCaseID) throws Exception {
-        System.out.println(searchTextBox.isEnabled());
+//        System.out.println(searchTextBox.isEnabled());
         String sSearchText = DB.GetData("login", "TestCaseID", sTestCaseID, "searchTerm");
-        System.out.println(sSearchText);
+//        System.out.println(sSearchText);
         //    Reporter.log(sSearchText);
 
         searchTextBox.sendKeys(sSearchText);
@@ -46,7 +46,7 @@ public class HomePage {
         searchButton.click();
         ProductListPage PLP = PageFactory.initElements(driver,ProductListPage.class);
         String sExpectedSearchText=DB.GetData("login", "TestCaseID", sTestCaseID, "searchTerm");
-        System.out.println("obj0: "+PLP);
+//        System.out.println("obj0: "+PLP);
 
       //  System.out.println("obj: "+PLP.sText);
     /*  System.out.println("pLP is :"+PLP.searchResultHeading.getText());

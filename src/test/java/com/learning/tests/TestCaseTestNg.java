@@ -55,13 +55,13 @@ public class TestCaseTestNg {
        homePage.enterSearchText("product");
 
         homePage.clickSearchButton(driver,"product");
-       // Thread.sleep(5000);
-        //homePage.hoverOverMiniBasket();
+
         ProductDisplayPage PDP = PageFactory.initElements(driver,ProductDisplayPage.class);
         PDP.setSize("product");
         PDP.clickOnAddToBasket();
         
-        homePage.hoverOverMiniBasket(driver);
+        //homePage.hoverOverMiniBasket(driver);
+        homePage.clickOnMiniBasketIcon();
 
     }
 

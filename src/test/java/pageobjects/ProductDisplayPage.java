@@ -58,19 +58,17 @@ public class ProductDisplayPage {
         }
     }
 
-    public void clickOnAddToBasket() throws Exception  {
+    public void clickOnAddToBasket() throws Exception {
         System.out.println("i came here");
         Thread.sleep(5000);
-        WebDriverWait wait = new WebDriverWait(driver,15);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.elementToBeClickable(addToCart));
         wait.until(ExpectedConditions.visibilityOf(addToCart));
         addToCart.click();
-        }
+    }
+
+
 }
-
-
-
-
 
 
 /* stale element exception issue this might resolve pseudocode

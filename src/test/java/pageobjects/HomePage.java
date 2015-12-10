@@ -13,17 +13,17 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class HomePage {
     public String sCategory;
-     public String sSubCategory;
-    public  WebDriver driver;
+    public String sSubCategory;
+    public WebDriver driver;
 
 
-    @FindBy(xpath ="//form[@name='simpleSearch']//input[@id='q']")
+    @FindBy(xpath = "//form[@name='simpleSearch']//input[@id='q']")
     public WebElement searchTextBox;
 
-    @FindBy(xpath="//input[@type='submit'][@value='go']")
+    @FindBy(xpath = "//input[@type='submit'][@value='go']")
     public WebElement searchButton;
 
-    @FindBy(xpath="//a[@class='mini-cart-link']")
+    @FindBy(xpath = "//a[@class='mini-cart-link']")
     public WebElement miniBasket;
 
     /*@FindBy(id="search-query-wrapper")
@@ -41,13 +41,13 @@ public class HomePage {
 
     }
 
-    public void clickSearchButton(WebDriver driver,String sTestCaseID)throws Exception {
+    public void clickSearchButton(WebDriver driver, String sTestCaseID) throws Exception {
         searchButton.click();
-        ProductListPage PLP = PageFactory.initElements(driver,ProductListPage.class);
-        String sExpectedSearchText=DB.GetData("login", "TestCaseID", sTestCaseID, "searchTerm");
+        ProductListPage PLP = PageFactory.initElements(driver, ProductListPage.class);
+        String sExpectedSearchText = DB.GetData("login", "TestCaseID", sTestCaseID, "searchTerm");
 //        System.out.println("obj0: "+PLP);
 
-      //  System.out.println("obj: "+PLP.sText);
+        //  System.out.println("obj: "+PLP.sText);
     /*  System.out.println("pLP is :"+PLP.searchResultHeading.getText());
         if (sExpectedSearchText==(PLP.searchResultHeading.getText())){
 
@@ -59,7 +59,8 @@ public class HomePage {
 
 
     }
-    public void hoverOverMiniBasket(WebDriver driver){
+
+    public void hoverOverMiniBasket(WebDriver driver) {
         System.out.println("minibasket :" + miniBasket.isDisplayed());
         Actions actions = new Actions(driver);
         actions.moveToElement(miniBasket).perform();
@@ -69,4 +70,13 @@ public class HomePage {
 
         //mini-cart-link-checkout
     }
+
+    public void clickOnMiniBasketIcon() {
+        /*this when an item is present in the basket takes the user to the basket page */
+        if (miniBasket.isDisplayed()) {
+            System.out.println("displayed");
+            miniBasket.click();
+        }
+
     }
+}

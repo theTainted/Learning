@@ -38,16 +38,12 @@ public class DB {
         String query;
         //query= "Select * from " +tableName +" where " +columnName+ " = '" + sColumnValue +"'";
           query="Select * from " +tableName +" WHERE " +columnName + " = '" + columnValue +"'";
-
-        System.out.println("1: "+query);
-        ResultSet results;
+            ResultSet results;
         String ID=null;
        try{
-//            System.out.println(query);
+
             results=statement.executeQuery(query);
-//           System.out.println(results);
            if(results.next()){
-           //    System.out.println("if");
             ID=results.getString(sExpectedValue);
             //  System.out.println(ID);
             }
@@ -55,7 +51,6 @@ public class DB {
         }
         catch (Exception e){
             e.printStackTrace();
-//            System.out.println("inside catch");
         }
         tearDown();
         return ID ;
